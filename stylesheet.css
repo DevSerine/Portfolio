@@ -1,0 +1,772 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+header {
+  background-color: #0d0c0c;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 200px;
+}
+.logo {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 2em;
+  margin-left: -15%;
+  cursor: default;
+  opacity: 0;
+  animation: slideRight 1s ease forwards;
+}
+
+.navigation a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 500;
+  padding-left: 30px;
+  cursor: pointer;
+  opacity: 0;
+  animation: slideLove 1s ease forwards;
+  display: inline-block;
+  flex-shrink: 0;
+  transition: 0.3s;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.navigation a:hover {
+  color: #a30941;
+}
+@keyframes slideRight {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+@keyframes slideTop {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+.main {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(https://images.hdqwalls.com/download/binary-code-abstract-lu-2048x1152.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.area {
+  margin-left: 10%;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+.main h2 {
+  font-size: 33px;
+  color: #ffffff;
+  
+}
+main h1 {
+  color: #ffffff;
+}
+.main h1 span {
+  font-size: 40px;
+  color: #a30941;
+}
+
+.main-btn {
+  color: #fff;
+  background-color: #a30941;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.9375em 2.1875em;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  transition: 0.7s ease;
+}
+
+.main-btn:hover {
+  background-color: #a30941;
+  transform: scale(1.1);
+  box-shadow: 0 0 5px #a30941, 0 0 25px #a30941, 0 0 50px #a30941,
+    0 0 100px #a30941, 0 0 200px #a30941;
+}
+
+.btn-box {
+  position: absolute;
+  top: 73%;
+  right: 80%;
+  display: inline-block;
+  padding: 12px 28px;
+  background: #a30941;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+  opacity: 0;
+  animation: slidelilou 1s ease forwards;
+}
+
+.btn-box:hover {
+  box-shadow: 0 0 5px #a30941, 0 0 25px #a30941, 0 0 50px #a30941,
+    0 0 100px #a30941, 0 0 200px #a30941;
+}
+
+@keyframes slidelilou {
+  100% {
+    opacity: 1;
+    top: 73%;
+    right: 20%;
+  }
+}
+
+.social-icons a {
+  color: #a30941; /* Couleur de base */
+  font-size: 2em;
+  padding-right: 30px;
+  text-decoration: none;
+  transition: color 0.7s ease; /* Transition de la couleur seulement */
+  margin-top: 30%;
+}
+
+.social-icons a:hover {
+  color: #fff; /* Couleur au survol */
+  transform: scale(1.1);
+}
+
+.cards {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(https://wallpapercave.com/wp/wp8778419.png)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.title {
+  font-size: 40px;
+  color: #a30941;
+  margin-left: 10%;
+  margin-top: -33%;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.para {
+  font-size: 30px;
+  color: #fff;
+  margin-left: -10%;
+  margin-top: -19%;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.num1 {
+  width: 300px;
+  height: 100px;
+  perspective: 1000px;
+  position: absolute;
+  left: 5%;
+  top: 59%;
+  transform: translate(0%, -50%);
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.num1-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.num1:hover .num1-inner {
+  transform: rotateY(180deg);
+}
+
+.num1-front,
+.num1-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.num1-front,
+.num1-back {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.num1-front {
+  background-color: #a30941;
+  color: #fff;
+  border: 2px solid #a30941;
+  transform: rotateY(0deg);
+}
+
+.num1-back {
+  background-color: #000000; /* Utilisez la même couleur que la face avant ou ajustez selon vos préférences */
+  color: #fff;
+  border: 2px solid #000000;
+  transform: rotateY(180deg);
+}
+
+.num2 {
+  width: 300px;
+  height: 100px;
+  perspective: 1000px;
+  position: absolute;
+  right: 5%;
+  top: 59%;
+  transform: translate(0%, -50%);
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.num2-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+}
+
+.num2:hover .num2-inner {
+  transform: rotateY(180deg);
+}
+
+.num2-front,
+.num2-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.num2-front,
+.num2-back {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.num2-front {
+  background-color: #a30941;
+  color: #fff;
+  border: 2px solid #a30941;
+  transform: rotateY(0deg);
+}
+
+.num2-back {
+  background-color: #000000; /* Utilisez la même couleur que la face avant ou ajustez selon vos préférences */
+  color: #fff;
+  border: 2px solid #000000;
+  transform: rotateY(180deg);
+}
+
+.num-btn-container {
+  position: relative;
+}
+
+.num-btn {
+  color: #fff;
+  background-color: #a30941;
+  text-decoration: none;
+  font-size: 1.1em;
+  font-weight: 600;
+  display: inline-block;
+  padding: 0.9375em 2.1875em;
+  letter-spacing: 1px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  transition: 0.7s ease;
+  position: absolute;
+  left: 40%; /* Ajustez cette valeur selon vos besoins */
+  margin-top: 30%; /* Ajustez cette valeur selon vos besoins */
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.num-btn:hover {
+  background-color: #a30941;
+  transform: scale(1.1);
+  box-shadow: 0 0 5px #a30941, 0 0 25px #a30941, 0 0 50px #a30941,
+    0 0 100px #a30941, 0 0 200px #a30941;
+}
+
+.num-btn-box {
+  position: absolute;
+  top: 73%; /* Ajustez cette valeur selon vos besoins */
+  right: 80%; /* Ajustez cette valeur selon vos besoins */
+  display: inline-block;
+  padding: 12px 28px;
+  background: #a30941;
+  border-radius: 40px;
+  font-size: 16px;
+  color: #081b29;
+  letter-spacing: 1px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.num-btn-box:hover {
+  box-shadow: 0 0 5px #a30941, 0 0 25px #a30941, 0 0 50px #a30941,
+    0 0 100px #a30941, 0 0 200px #a30941;
+}
+
+@keyframes slideNumBtn {
+  100% {
+    opacity: 1;
+    top: 73%; /* Ajustez cette valeur selon vos besoins */
+    right: 20%; /* Ajustez cette valeur selon vos besoins */
+  }
+}
+
+.cardsx {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(https://wallpapercave.com/wp/wp8778419.png)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.titlex {
+  font-size: 40px;
+  color: #a30941;
+  margin-left: 10%;
+  margin-top: -40%;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  font-family: "Arial", sans-serif;
+}
+
+.container1 {
+  text-align: center;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.heading {
+  margin-bottom: 20px;
+  position: relative;
+  font-size: 30px;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+  left: 77%;
+  top: -55px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.skill {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.icon-bar {
+  margin-right: 5px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.bxl-html5,
+.bxl-css3,
+.bxl-javascript,
+.bxl-php,
+.bxl-nodejs,
+.bxl-python,
+.bxl-react,
+.bxl-flutter {
+  position: relative;
+  left: -70px;
+  top: -40px;
+  color: #fff;
+  font-size: 30px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.progress-line {
+  position: relative;
+  border-radius: 11px;
+  height: 5px;
+  width: 400px;
+  background-color: #282626;
+  margin-bottom: 10px;
+  left: -70px;
+  top: -40px;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.progress-line span {
+  display: block;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.progress-line.html span {
+  width: 300px;
+  background-color: #a30941;
+}
+
+.progress-line.css span {
+  width: 290px;
+  background-color: #a30941;
+}
+
+.progress-line.javascript span,
+.progress-line.php span,
+.progress-line.python span,
+.progress-line.nodejs span,
+.progress-line.react span,
+.progress-line.flutter span {
+  width: 283px;
+  background-color: #a30941;
+}
+
+.outer-circle {
+  width: 350px;
+  height: 350px;
+  background-color: #a30941;
+  border-radius: 50%;
+  overflow: hidden;
+  position: relative;
+}
+
+.outer-circle::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: url("https://c1.wallpaperflare.com/preview/730/789/292/developer-programming-work-minimal.jpg");
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.pos {
+  margin-top: -120%;
+  margin-left: 120%;
+}
+
+.top1 {
+  margin-left: 10%;
+  margin-top: 20%;
+}
+
+.cardix {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(https://wallpapercave.com/wp/wp8778419.png)
+    no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.titleix {
+  font-size: 40px;
+  color: #a30941;
+  margin-left: 10%;
+  margin-top: -30%;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.Projects-container {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  align-items: center;
+  gap: 2.5rem;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+  margin-top: 10%;
+}
+
+:root {
+  --bg-color: #282626; /* Remplacez cette couleur par celle que vous souhaitez utiliser */
+  --main-color: #a30941; /* Remplacez cette couleur par celle que vous souhaitez utiliser */
+}
+
+.Projects-container .Projects-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem var(--bg-color);
+  overflow: hidden;
+  display: flex;
+}
+
+.Projects-box img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+
+.Projects-box:hover img {
+  transform: scale(1.1);
+}
+
+.Projects-box .Projects-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), var(--main-color));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  transform: translateY(100%);
+  transition: 0.5s ease;
+}
+
+.Projects-box:hover .Projects-layer {
+  transform: translateY(0%);
+}
+.Projects-layer h4 {
+  font-size: 1.5rem;
+}
+
+.Contact {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background: url(https://images.hdqwalls.com/download/binary-code-abstract-lu-2048x1152.jpg)no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+.titlx {
+  font-size: 40px;
+  color: #a30941;
+  margin-left: 10%;
+  margin-top: -35%;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+.form-container {
+  width: 350px; /* Ajustez la largeur selon vos besoins */
+  background: linear-gradient(#060606, #090909) padding-box,
+    linear-gradient(145deg, transparent 35%, #a30941, #40c9ff) border-box;
+  border: 2px solid transparent;
+  padding: 24px; /* Ajustez le padding selon vos besoins */
+  font-size: 14px;
+  font-family: inherit;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-sizing: border-box;
+  border-radius: 16px;
+  background-size: 200% 100%;
+  animation: gradient 5s ease infinite;
+  margin-top: 5%;
+  margin-left: 40%;
+  opacity: 0;
+  animation: slideTop 1s ease forwards;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.form-container button:active {
+  scale: 0.95;
+}
+
+.form-container .form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.form-container .form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.form-container .form-group input {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  color: #fff;
+  font-family: inherit;
+  background-color: transparent;
+  border: 1px solid #414141;
+}
+
+.form-container .form-group textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  resize: none;
+  color: #fff;
+  height: 96px;
+  border: 1px solid #414141;
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.form-container .form-group input::placeholder {
+  opacity: 0.5;
+}
+
+.form-container .form-group input:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-group textarea:focus {
+  outline: none;
+  border-color: #e81cff;
+}
+
+.form-container .form-submit-btn {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  align-self: flex-start;
+  font-family: inherit;
+  color: #ffffff;
+  font-weight: 600;
+  width: 40%;
+  background: #313131;
+  border: 1px solid #414141;
+  padding: 12px 16px;
+  font-size: inherit;
+  gap: 8px;
+  margin-top: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.form-container .form-submit-btn:hover {
+  background-color: #a30941;
+  border-color: #a30941;
+}
+
+.footer {
+  background-color: #0d0c0c;
+  color: #fff;
+  padding: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-title {
+  font-size: 1.3em;
+  font-weight: 600;
+}
+.footer-title span {
+  color: #a30941;
+}
+
+.heh a {
+  color: #a30941; /* Couleur de base */
+  font-size: 2em;
+  padding-right: 30px;
+  text-decoration: none;
+  transition: color 0.7s ease; /* Transition de la couleur seulement */
+  margin-top: 30%;
+}
+
+.heh a:hover {
+  color: #fff; /* Couleur au survol */
+  transform: scale(1.1);
+}
+/* Styles généraux pour les écrans larges (ordinateurs de bureau, etc.) */
+@media screen and (min-width: 1200px) {
+  /* Ajoutez vos styles ici */
+}
+
+/* Styles pour les tablettes et appareils avec une largeur d'écran entre 768px et 1199px */
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  /* Ajoutez vos styles ici */
+}
+
+/* Styles pour les appareils mobiles avec une largeur d'écran inférieure à 767px */
+@media screen and (max-width: 767px) {
+  /* Ajoutez vos styles ici */
+}
